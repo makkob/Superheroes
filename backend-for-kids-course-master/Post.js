@@ -1,10 +1,12 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const Post = new mongoose.Schema({
-    author: {type: String, required: true},
-    title: {type: String, required: true},
-    content: {type: String, required: true},
-    picture: {type: String}
-})
+  nickname: { type: String, required: true },
+  real_name: { type: String, required: true },
+  conorigin_description: { type: String, required: true },
+  superpowers: { type: String, required: true },
+  catch_phrase: { type: String, required: true },
+  images: { type: String },
+});
 
-export default mongoose.model('Post', Post)
+export default mongoose.model("Post", Post);
