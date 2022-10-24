@@ -1,0 +1,11 @@
+.itemsDiv {
+  display: flex;
+  justify-content: center;
+}
+.itemsGrid {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 90%;
+  margin-top: 25px;
+}
