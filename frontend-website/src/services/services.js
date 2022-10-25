@@ -6,8 +6,4 @@ function fetchItemsFromDB() {
   return axios(URL).then((response) => response);
 }
 
-// function update  (){
-//   return
-// }
-
 export default fetchItemsFromDB;

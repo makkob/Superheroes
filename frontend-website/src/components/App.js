@@ -6,6 +6,7 @@ import fetchItemsFromDB from "../services/services";
 import LoadMore from "./LoadMore";
 import AddSuperhero from "./AddSuperhero";
 import UpdateSuperhero from "./UpdateSuperhero";
+import addNew from "../services/create";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -40,11 +41,8 @@ function App() {
       [evt.target[2].name]: evt.target[2].value,
       [evt.target[3].name]: evt.target[3].value,
     });
-
-    // return setnewHeroe({
-    //   [name]: value,
-    // });
   };
+  const onLoadMore = () => addNew();
 
   return (
     <div className="App">
@@ -54,7 +52,7 @@ function App() {
         handleUpdate={handleUpdate}
         handleDelete={handleDelete}
       />
-      <LoadMore />
+      <LoadMore onLoadMore={onLoadMore} />
       <AddSuperhero addNewHero={addNewHero} />
       <UpdateSuperhero />
     </div>
