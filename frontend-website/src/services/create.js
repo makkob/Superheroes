@@ -33,6 +33,11 @@ const body = {
 //   };
 // };
 // }
+
+const test = new FormData({
+  test: 2,
+});
+console.log(test);
 async function addNew() {
   return await axios
     .post(URL, body, {

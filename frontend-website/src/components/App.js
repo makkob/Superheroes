@@ -39,7 +39,7 @@ function App() {
     }
     setnewHero(formData);
   };
-  const onLoadMore = () => addHeroes();
+  const onLoadMore = () => addNew();
 
   return (
     <div className="App">
