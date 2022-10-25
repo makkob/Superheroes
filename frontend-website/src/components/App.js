@@ -31,16 +31,12 @@ function App() {
   const handleUpdate = (evt) => console.log(evt.target.id);
   const addNewHero = (evt) => {
     evt.preventDefault();
-    let { name, value } = evt.target;
-    console.log("name", name);
-    console.log("value", value);
 
-    setnewHero({
-      [evt.target[0].name]: evt.target[0].value,
-      [evt.target[1].name]: evt.target[1].value,
-      [evt.target[2].name]: evt.target[2].value,
-      [evt.target[3].name]: evt.target[3].value,
-    });
+    const formData = {};
+    for (let i = 0; i <= 3; i++) {
+      formData[evt.target[i].name] = evt.target[i].value;
+    }
+    setnewHero(formData);
   };
   const onLoadMore = () => addNew();
 
