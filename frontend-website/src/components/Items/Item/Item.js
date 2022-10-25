@@ -9,6 +9,8 @@ export default function Item({
   superpowers,
   catch_phrase,
   picture,
+  handleDelete,
+  handleUpdate,
 }) {
   return (
     <div className={styles.item}>
@@ -32,8 +34,20 @@ export default function Item({
         />
       </div>
 
-      <button className={`${styles.button} ${styles.delete}`}>Delete</button>
-      <button className={`${styles.button} ${styles.update}`}>Update</button>
+      <button
+        id={id}
+        onClick={handleDelete}
+        className={`${styles.button} ${styles.delete}`}
+      >
+        Delete
+      </button>
+      <button
+        id={id}
+        onClick={handleUpdate}
+        className={`${styles.button} ${styles.update}`}
+      >
+        Update
+      </button>
     </div>
   );
 }
