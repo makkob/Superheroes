@@ -14,7 +14,7 @@ export default function Item({
     <div className={styles.item}>
       <p className={styles.itemText}>{nickname}</p>
       <div className={styles.description}>
-        <p className={styles.hiddenText}>
+        <p className={styles.hiddenText} id={styles.slidein}>
           <b>Real name:</b> {real_name}
           <br />
           <b>Origin:</b> {origin_description}
