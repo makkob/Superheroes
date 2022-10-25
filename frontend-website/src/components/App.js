@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import Items from "./Items";
 import fetchImagesFromDB from "../services/services";
+import LoadMore from "./LoadMore";
 
 function App() {
   useEffect(() => {
@@ -23,6 +24,7 @@ function App() {
     <div className="App">
       <Header />
       <Items />
+      <LoadMore />
     </div>
   );
 }

@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 
 .header {
-  background-color: rgb(78, 78, 150);
+  background-color: rgb(150, 150, 245);
   padding-top: 1px;
   padding-bottom: 1px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .text {
@@ -11,4 +13,41 @@
   color: white;
   font-size: 36px;
   font-family: "Muli", sans-serif;
+  margin: 25px;
+}
+
+.button {
+  background-color: #fff;
+  border: 0 solid #e2e8f0;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #0d172a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none #0d172a solid;
+  text-decoration-thickness: auto;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  height: 4rem;
+  align-self: center;
+}
+
+.button:hover {
+  background-color: #d0ffc6;
+}
+
+@media (min-width: 768px) {
+  .button {
+    font-size: 1.125rem;
+  }
 }

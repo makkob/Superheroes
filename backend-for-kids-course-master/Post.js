@@ -6,7 +6,7 @@ const Post = new mongoose.Schema({
   conorigin_description: { type: String, required: true },
   superpowers: { type: String, required: true },
   catch_phrase: { type: String, required: true },
-  images: { type: String },
+  picture: { type: String },
 });
 
 export default mongoose.model("Post", Post);

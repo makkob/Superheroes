@@ -1,19 +1,20 @@
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 
 .img {
-  width: 300px;
+  width: 250px;
   border-radius: 5px;
 }
 
 .item {
   text-align: center;
   align-items: center;
+  justify-content: center;
   background: linear-gradient(
     00deg,
-    rgb(100, 95, 151) 0%,
-    rgb(170, 170, 170) 100%
+    rgb(119, 116, 155) 0%,
+    rgb(242, 234, 255) 100%
   );
-  width: 350px;
+  width: 300px;
   border-radius: 5px;
   padding-bottom: 25px;
 }
@@ -50,9 +51,13 @@
   margin: 5px;
 }
 
-.button:hover {
+.delete:hover {
   background-color: #ff3434;
   color: #fff;
+}
+
+.update:hover {
+  background-color: #d0ffc6;
 }
 
 @media (min-width: 768px) {
@@ -60,4 +65,30 @@
     font-size: 1.125rem;
     padding: 1rem 2rem;
   }
+}
+.hiddenText {
+  display: none;
+  font-family: "Muli", sans-serif;
+  width: 250px;
+  margin: 0px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  color: #fff;
+  font-weight: 800;
+}
+
+.description:hover .img {
+  display: none;
+}
+.description:hover .hiddenText {
+  display: block;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  border-radius: 5px;
 }
