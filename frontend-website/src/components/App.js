@@ -22,9 +22,11 @@ function App() {
     // .finally(() => scroll());
   };
 
+  let addHeroes = (evt) => console.log(evt);
+
   return (
     <div className="App">
-      <Header />
+      <Header onAddHeroes={addHeroes} />
       <Items heroes={items} />
       <LoadMore />
     </div>
