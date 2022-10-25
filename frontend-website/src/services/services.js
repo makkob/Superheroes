@@ -1,7 +1,13 @@
 import axios from "axios";
 
+const URL = `http://localhost:5000/api/posts`;
+
 function fetchItemsFromDB() {
-  return axios(`http://localhost:5000/api/posts`).then((response) => response);
+  return axios(URL).then((response) => response);
 }
+
+// function update  (){
+//   return
+// }
 
 export default fetchItemsFromDB;

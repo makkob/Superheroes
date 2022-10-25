@@ -5,6 +5,7 @@ import Items from "./Items";
 import fetchItemsFromDB from "../services/services";
 import LoadMore from "./LoadMore";
 import AddSuperhero from "./AddSuperhero";
+import UpdateSuperhero from "./UpdateSuperhero";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -37,6 +38,7 @@ function App() {
       />
       <LoadMore />
       <AddSuperhero />
+      <UpdateSuperhero />
     </div>
   );
 }
