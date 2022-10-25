@@ -3,7 +3,6 @@ import Item from "./Item";
 import styles from "./Items.module.css";
 
 export default function Items({ heroes, handleDelete, handleUpdate }) {
-  console.log(heroes);
   return (
     <div className={styles.itemsDiv}>
       <div className={styles.itemsGrid}>

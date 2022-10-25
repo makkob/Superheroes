@@ -9,6 +9,7 @@ import UpdateSuperhero from "./UpdateSuperhero";
 
 function App() {
   const [items, setItems] = useState([]);
+  const [newHero, setnewHero] = useState();
 
   useEffect(() => {
     fetchItems();
@@ -27,6 +28,23 @@ function App() {
   const addHeroes = (evt) => console.log(evt);
   const handleDelete = (evt) => console.log(evt.target.id);
   const handleUpdate = (evt) => console.log(evt.target.id);
+  const addNewHero = (evt) => {
+    evt.preventDefault();
+    let { name, value } = evt.target;
+    console.log("name", name);
+    console.log("value", value);
+
+    setnewHero({
+      [evt.target[0].name]: evt.target[0].value,
+      [evt.target[1].name]: evt.target[1].value,
+      [evt.target[2].name]: evt.target[2].value,
+      [evt.target[3].name]: evt.target[3].value,
+    });
+
+    // return setnewHeroe({
+    //   [name]: value,
+    // });
+  };
 
   return (
     <div className="App">
@@ -37,7 +55,7 @@ function App() {
         handleDelete={handleDelete}
       />
       <LoadMore />
-      <AddSuperhero />
+      <AddSuperhero addNewHero={addNewHero} />
       <UpdateSuperhero />
     </div>
   );

@@ -2,15 +2,13 @@ import React from "react";
 import styles from "./Item.module.css";
 
 export default function Item({
-  _id,
+  id,
   nickname,
   real_name,
   origin_description,
   superpowers,
   catch_phrase,
   picture,
-  handleDelete,
-  handleUpdate,
 }) {
   return (
     <div className={styles.item}>
@@ -34,20 +32,8 @@ export default function Item({
         />
       </div>
 
-      <button
-        id={_id}
-        onClick={handleDelete}
-        className={`${styles.button} ${styles.delete}`}
-      >
-        Delete
-      </button>
-      <button
-        id={_id}
-        onClick={handleUpdate}
-        className={`${styles.button} ${styles.update}`}
-      >
-        Update
-      </button>
+      <button className={`${styles.button} ${styles.delete}`}>Delete</button>
+      <button className={`${styles.button} ${styles.update}`}>Update</button>
     </div>
   );
 }

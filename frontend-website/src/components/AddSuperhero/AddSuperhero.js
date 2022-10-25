@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./AddSuperhero.module.css";
 
-export default function AddSuperhero() {
+export default function AddSuperhero({ addNewHero }) {
   return (
-    <form className={styles.modal}>
-      <p>Form for add superhero</p>
+    <form onSubmit={addNewHero} className={styles.modal}>
+      <p>Form to add superhero</p>
       <label>
         Nickname: <input type="text" name="nickname" />
       </label>{" "}
