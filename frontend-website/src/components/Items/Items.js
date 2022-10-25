@@ -2,7 +2,7 @@ import React from "react";
 import Item from "./Item";
 import styles from "./Items.module.css";
 
-export default function Items({ heroes }) {
+export default function Items({ heroes, handleDelete, handleUpdate }) {
   console.log(heroes);
   return (
     <div className={styles.itemsDiv}>
@@ -18,6 +18,7 @@ export default function Items({ heroes }) {
             picture,
           }) => (
             <Item
+              _id={_id}
               key={_id}
               nickname={nickname}
               picture={picture}
@@ -25,8 +26,9 @@ export default function Items({ heroes }) {
               origin_description={origin_description}
               superpowers={superpowers}
               catch_phrase={catch_phrase}
-
-              //  onImgClick = { () => onShowModal(largeImageURL , tags) }
+              handleDelete={handleDelete}
+              handleUpdate={handleUpdate}
+              //   }
             />
           )
         )}

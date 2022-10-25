@@ -4,6 +4,7 @@ import Header from "./Header";
 import Items from "./Items";
 import fetchItemsFromDB from "../services/services";
 import LoadMore from "./LoadMore";
+import AddSuperhero from "./AddSuperhero";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -22,13 +23,20 @@ function App() {
     // .finally(() => scroll());
   };
 
-  let addHeroes = (evt) => console.log(evt);
+  const addHeroes = (evt) => console.log(evt);
+  const handleDelete = (evt) => console.log(evt.target.id);
+  const handleUpdate = (evt) => console.log(evt.target.id);
 
   return (
     <div className="App">
       <Header onAddHeroes={addHeroes} />
-      <Items heroes={items} />
+      <Items
+        heroes={items}
+        handleUpdate={handleUpdate}
+        handleDelete={handleDelete}
+      />
       <LoadMore />
+      <AddSuperhero />
     </div>
   );
 }
