@@ -7,6 +7,7 @@ import LoadMore from "./LoadMore";
 import AddSuperhero from "./AddSuperhero";
 import UpdateSuperhero from "./UpdateSuperhero";
 import addNew from "../services/create";
+import deleteHero from "../services/delete";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -38,7 +39,7 @@ function App() {
     }
     setnewHero(formData);
   };
-  const onLoadMore = () => addNew();
+  const onLoadMore = () => addHeroes();
 
   return (
     <div className="App">

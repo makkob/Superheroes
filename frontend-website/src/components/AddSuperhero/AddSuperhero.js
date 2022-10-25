@@ -3,7 +3,7 @@ import styles from "./AddSuperhero.module.css";
 
 export default function AddSuperhero({ addNewHero }) {
   return (
-    <form onSubmit={addNewHero} className={styles.modal}>
+    <form onSubmit={addNewHero} className={styles.modal} id="addHero">
       <p>Form to add superhero</p>
       <label>
         Nickname: <input type="text" name="nickname" />
