@@ -7,11 +7,18 @@ export default function Item() {
       <p className={styles.itemText}>Superman</p>
       <div className={styles.description}>
         <p className={styles.hiddenText}>
-          2133 333333 3333333333 333333333 3333 333333 33 3 333333333 33333
-          3333333333 3333 33333 3333 33 333 STARTEDsd sd STARTEDasd
-          app.disabled'sasaddddddd sad sad asd asd asd sad sad sd sad sad asd
-          app.disabled'asd asd sd asa'; app.disabled'sasaddddddd sad sad asd asd
-          asd sad sad sdasdasssdsadsdsad sad sda sad sad sa sda sa d
+          <b>Real name:</b> Clark Kent
+          <br />
+          <b>Origin:</b> he was born Kal-El on the planet Krypton, before being
+          rocketed to Earth as an infant by his scientist father Jor-El, moments
+          before Krypton's destruction…
+          <br />
+          <b>Superpowers:</b> solar energy absorption and healing factor, solar
+          flare and heat vision, solar invulnerability, flight…
+          <br />
+          ~
+          <br />
+          <i>“Look, up in the sky, it's a bird, it's a plane, it's Superman!</i>
         </p>
         <img
           className={styles.img}

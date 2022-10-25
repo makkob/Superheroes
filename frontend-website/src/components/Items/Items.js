@@ -11,11 +11,6 @@ export default function Items() {
         <Item />
         <Item />
         <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
       </div>
     </div>
   );
