@@ -17,7 +17,7 @@ export default function Items({ heroes, handleDelete, handleUpdate }) {
             picture,
           }) => (
             <Item
-              _id={_id}
+              id={_id}
               key={_id}
               nickname={nickname}
               picture={picture}

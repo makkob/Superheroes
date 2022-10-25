@@ -28,7 +28,7 @@ function App() {
   };
 
   const addHeroes = (evt) => console.log(evt);
-  const handleDelete = (id) => console.log(id);
+  const handleDelete = (evt) => console.log(evt.target.id);
   const handleUpdate = (evt) => console.log(evt.target.id);
   const addNewHero = (evt) => {
     evt.preventDefault();
