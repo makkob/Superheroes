@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Superheroes/frontend-website/static/css/main.170c7051.css",
+    "main.js": "/Superheroes/frontend-website/static/js/main.7605c297.js",
+    "index.html": "/Superheroes/frontend-website/index.html",
+    "main.170c7051.css.map": "/Superheroes/frontend-website/static/css/main.170c7051.css.map",
+    "main.7605c297.js.map": "/Superheroes/frontend-website/static/js/main.7605c297.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.170c7051.css",
+    "static/js/main.7605c297.js"
+  ]
+}
