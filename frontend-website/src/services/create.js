@@ -34,16 +34,17 @@ const body = {
 // };
 // }
 
-async function addNew() {
-  return await axios
-    .post(URL, body, {
-      headers: {
-        "content-type": "text/json",
-      },
-    })
-    .then((res) => console.log(JSON.stringify(res)))
+async function addNew(formData) {
+  // return await axios
+  //   .post(URL, body, {
+  //     headers: {
+  //       "content-type": "text/json",
+  //     },
+  //   })
+  //   .then((res) => console.log(JSON.stringify(res)))
 
-    .catch((err) => console.log(err));
+  //   .catch((err) => console.log(err));
+  console.log(formData);
 }
 
 export default addNew;
