@@ -2,8 +2,8 @@
 
 .img {
   object-fit: cover;
-  width: 250px;
-  height: 250px;
+  width: 16rem;
+  height: 15rem;
   border-radius: 5px;
 }
 
@@ -16,22 +16,22 @@
     rgb(119, 116, 155) 0%,
     rgb(242, 234, 255) 100%
   );
-  width: 300px;
+  width: 18rem;
   height: auto;
-  border-radius: 5px;
-  padding-bottom: 25px;
+  border-radius: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 .itemText {
   font-family: "Muli", sans-serif;
-  font-size: 24px;
+  font-size: 1.2rem;
   font-weight: 1000;
 }
 
 .button {
   background-color: #fff;
   border: 0 solid #e2e8f0;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   box-sizing: border-box;
   color: #0d172a;
   cursor: pointer;
@@ -51,7 +51,7 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  margin: 5px;
+  margin: 0.3rem;
 }
 
 .delete:hover {
@@ -71,17 +71,16 @@
 }
 .hiddenText {
   display: none;
-  /* position: absolute; */
   margin-left: auto;
   margin-right: auto;
   font-family: "Muli", sans-serif;
-  width: 250px;
+  width: 16rem;
   margin: 0px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 15px;
-  padding-bottom: 5px;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
   color: rgb(0, 0, 0);
   font-weight: 400;
   font-size: 1.2rem;
@@ -90,7 +89,7 @@
 .description {
   display: flex;
   justify-content: center;
-  height: 250px;
+  height: 16rem;
 }
 
 .description:hover .img {

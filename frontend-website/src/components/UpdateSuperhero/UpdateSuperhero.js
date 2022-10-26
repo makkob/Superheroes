@@ -8,20 +8,28 @@ export default function UpdateSuperhero({ updateNewHero, closeUpdateModal }) {
       <form onSubmit={updateNewHero} className={styles.modal} id="addHero">
         <p>Form to update a superhero</p>
         <label>
-          Nickname: <input type="text" name="nickname" required />
+          Nickname:{" "}
+          <input type="text" name="nickname" className={styles.input} />
         </label>{" "}
         <label>
-          Real name: <input type="text" name="real_name" required />
+          Real name:{" "}
+          <input type="text" name="real_name" className={styles.input} />
         </label>{" "}
         <label>
           Origin description:{" "}
-          <input type="text" name="origin_description" required />
+          <input
+            type="text"
+            name="origin_description"
+            className={styles.input}
+          />
         </label>{" "}
         <label>
-          Superpowers: <input type="text" name="superpowers" required />
+          Superpowers:{" "}
+          <input type="text" name="superpowers" className={styles.input} />
         </label>{" "}
         <label>
-          Catch phrase: <input type="text" name="catch_phrase" required />
+          Catch phrase:{" "}
+          <input type="text" name="catch_phrase" className={styles.input} />
         </label>{" "}
         <label>
           Image:{" "}
@@ -29,10 +37,10 @@ export default function UpdateSuperhero({ updateNewHero, closeUpdateModal }) {
             type="file"
             name="filename"
             accept=".jpeg, .png, .webp, .JPG"
-            required
+            className={styles.input}
           />
         </label>{" "}
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" className={styles.submitButton} />
       </form>
     </div>
   );

@@ -10,6 +10,9 @@
   font-family: "Muli", sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
+  background-color: rgba(223, 223, 223, 0.897);
+  padding: 2rem;
+  border-radius: 0.5rem;
 }
 
 .background {
@@ -19,19 +22,40 @@
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.226);
-  backdrop-filter: blur(15px);
-}
-
-.input {
-  margin-bottom: 10px;
-  margin-top: 10px;
+  backdrop-filter: blur(3px);
 }
 
 .submitButton {
-  font-size: 1rem;
+  background-color: #fff;
+  border: 1px solid #000000;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  color: #0d172a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  text-decoration: none #0d172a solid;
+  text-decoration-thickness: auto;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 1rem;
 }
 
-/* 
-.hidden {
-  display: none;
-} */
+.input {
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+
+.input:focus {
+  background-color: aliceblue;
+}
