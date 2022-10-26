@@ -12,13 +12,13 @@ import updateHero from "../services/update";
 
 function App() {
   const [items, setItems] = useState([]);
-  // const [newHero, setnewHero] = useState();
+  const [newHero, setnewHero] = useState();
   const [addModal, setaddModal] = useState(false);
   const [updateModal, setupdateModal] = useState(false);
 
   useEffect(() => {
     fetchItems();
-  }, [items]);
+  }, []);
 
   let fetchItems = () => {
     fetchItemsFromDB()
@@ -32,7 +32,7 @@ function App() {
 
   const addHeroes = () => setaddModal(true);
   const handleDelete = (evt) => deleteHero(evt.target.id);
-  const handleUpdate = () => setupdateModal(true);
+  const handleUpdate = (evt) => setupdateModal(true);
 
   const addNewHero = (evt) => {
     evt.preventDefault();
@@ -57,19 +57,27 @@ function App() {
     setaddModal(false);
   };
 
-  // const updateHero = (evt) => {
-  //   evt.preventDefault();
+  const updateNewHero = (evt) => {
+    evt.preventDefault();
 
-  //   const formData = {};
-  //   for (let i = 0; i <= 3; i++) {
-  //     formData[evt.target[i].name] = evt.target[i].value;
-  //   }
-  //   setnewHero(formData);
-  //   setupdateModal(false);
-  // };
+    const formData = {
+      [evt.target[0].name]: evt.target[0].value,
+      [evt.target[1].name]: evt.target[1].value,
+      [evt.target[2].name]: evt.target[2].value,
+      [evt.target[3].name]: evt.target[3].value,
+      [evt.target[4].name]: evt.target[4].value,
+      picture: evt.target.filename.files[0],
+    };
+
+    setnewHero(formData);
+    setupdateModal(false);
+  };
 
   const onLoadMore = () => addNew();
   const closeAddModal = () => setaddModal(false);
+  const closeUpdateModal = () => {
+    setupdateModal(false);
+  };
 
   return (
     <div className="App">
@@ -83,7 +91,12 @@ function App() {
       {addModal && (
         <AddSuperhero addNewHero={addNewHero} closeAddModal={closeAddModal} />
       )}
-      {updateModal && <UpdateSuperhero />}
+      {updateModal && (
+        <UpdateSuperhero
+          updateNewHero={updateNewHero}
+          closeUpdateModal={closeUpdateModal}
+        />
+      )}
     </div>
   );
 }

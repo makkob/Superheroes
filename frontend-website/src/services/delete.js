@@ -5,7 +5,7 @@ const URL = `http://localhost:5000/api/posts/`;
 async function deleteHero(id) {
   return await axios
     .delete(URL + id)
-    .then((res) => alert(`The hero has been removed from database`))
+    .then(() => alert(`The hero has been removed from database`))
 
     .catch((err) => console.log(err));
 }
