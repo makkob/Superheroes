@@ -13,16 +13,16 @@ class FileService {
       console.log(e);
     }
   };
+
+  deleteFile = (id) => {
+    console.log(id);
+    fs.unlink("./static/" + id + ".jpg", (err) => {
+      if (err) {
+        throw err;
+      }
+
+      console.log("Delete File successfully.");
+    });
+  };
 }
-
-// deleteFile = (id) => {
-//   fs.unlink("./static/" + id + ".jpg", (err) => {
-//     if (err) {
-//       throw err;
-//     }
-
-//     console.log("Delete File successfully.");
-//   });
-// };
-
 export default new FileService();
