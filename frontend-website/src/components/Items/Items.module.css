@@ -5,10 +5,9 @@
 }
 .itemsGrid {
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 2.2rem;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   justify-items: center;
-
   width: 1000rem;
   margin-top: 5rem;
 }
