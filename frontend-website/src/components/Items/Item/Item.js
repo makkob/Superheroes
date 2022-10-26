@@ -27,10 +27,15 @@ export default function Item({
           <br />
           <i>{catch_phrase}</i>
         </p>
+
         <img
           className={styles.img}
           alt={nickname}
-          src={require(`../../../../../backend/static/${picture}`)}
+          src={
+            picture
+              ? require(`../../../../../backend/static/${picture}`)
+              : "https://img.freepik.com/free-vector/glitch-error-404-page_23-2148105404.jpg"
+          }
         />
       </div>
 

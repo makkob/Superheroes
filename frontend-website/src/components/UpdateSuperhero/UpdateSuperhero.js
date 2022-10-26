@@ -3,26 +3,36 @@ import styles from "./UpdateSuperhero.module.css";
 
 export default function UpdateSuperhero() {
   return (
-    <div className={styles.hidden}>
+    <div>
       <div className={styles.background} onClick={() => {}}></div>{" "}
-      <form className={styles.modal}>
-        <p>Form to update superhero</p>
-        <label className={styles.input}>
-          Nickname: <input type="text" name="nickname" />
+      <form onSubmit={() => {}} className={styles.modal} id="addHero">
+        <p>Form to update a superhero</p>
+        <label>
+          Nickname: <input type="text" name="nickname" required />
         </label>{" "}
-        <label className={styles.input}>
-          Real name: <input type="text" name="real_name" />
+        <label>
+          Real name: <input type="text" name="real_name" required />
         </label>{" "}
-        <label className={styles.input}>
-          Origin description: <input type="text" name="origin_description" />
+        <label>
+          Origin description:{" "}
+          <input type="text" name="origin_description" required />
         </label>{" "}
-        <label className={styles.input}>
-          Catch phrase: <input type="text" name="catch_phrase" />
+        <label>
+          Superpowers: <input type="text" name="superpowers" required />
         </label>{" "}
-        <label className={styles.input}>
-          Image: <input type="file" name="filename" />
+        <label>
+          Catch phrase: <input type="text" name="catch_phrase" required />
         </label>{" "}
-        <input type="submit" value="Submit" className={styles.submitButton} />
+        <label>
+          Image:{" "}
+          <input
+            type="file"
+            name="filename"
+            accept=".jpeg, .png, .webp, .JPG"
+            required
+          />
+        </label>{" "}
+        <input type="submit" value="Submit" />
       </form>
     </div>
   );

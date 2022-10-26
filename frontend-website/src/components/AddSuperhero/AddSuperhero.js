@@ -6,7 +6,7 @@ export default function AddSuperhero({ addNewHero, closeAddModal }) {
     <div>
       <div className={styles.background} onClick={closeAddModal}></div>{" "}
       <form onSubmit={addNewHero} className={styles.modal} id="addHero">
-        <p>Form to add superhero</p>
+        <p>Form to add a superhero</p>
         <label>
           Nickname: <input type="text" name="nickname" required />
         </label>{" "}
@@ -16,6 +16,9 @@ export default function AddSuperhero({ addNewHero, closeAddModal }) {
         <label>
           Origin description:{" "}
           <input type="text" name="origin_description" required />
+        </label>{" "}
+        <label>
+          Superpowers: <input type="text" name="superpowers" required />
         </label>{" "}
         <label>
           Catch phrase: <input type="text" name="catch_phrase" required />

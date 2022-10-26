@@ -42,6 +42,7 @@ function App() {
       [evt.target[1].name]: evt.target[1].value,
       [evt.target[2].name]: evt.target[2].value,
       [evt.target[3].name]: evt.target[3].value,
+      [evt.target[4].name]: evt.target[4].value,
       picture: evt.target.filename.files[0],
     };
     // for (let i = 0; i <= 3; i++) {

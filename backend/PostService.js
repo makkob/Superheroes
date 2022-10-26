@@ -34,6 +34,8 @@ class PostService {
     if (!id) {
       throw new Error("не указан ID");
     }
+    // console.log(FileService.deleteFile(id));
+    // FileService.deleteFile(id);
     const post = await Post.findByIdAndDelete(id);
     return post;
   }
