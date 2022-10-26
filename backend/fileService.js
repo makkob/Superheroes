@@ -16,7 +16,7 @@ class FileService {
 }
 
 // deleteFile = (id) => {
-//   fs.unlink("/backend/static" + id + ".jpg", (err) => {
+//   fs.unlink("./static/" + id + ".jpg", (err) => {
 //     if (err) {
 //       throw err;
 //     }

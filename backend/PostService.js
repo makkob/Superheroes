@@ -1,5 +1,6 @@
 import Post from "./Post.js";
 import FileService from "./fileService.js";
+// import fs from "fs";
 
 class PostService {
   async create(post, picture) {
@@ -34,8 +35,7 @@ class PostService {
     if (!id) {
       throw new Error("не указан ID");
     }
-    // console.log(FileService.deleteFile(id));
-    // FileService.deleteFile(id);
+
     const post = await Post.findByIdAndDelete(id);
     return post;
   }
