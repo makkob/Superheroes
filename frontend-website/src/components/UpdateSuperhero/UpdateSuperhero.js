@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./UpdateSuperhero.module.css";
 
-export default function UpdateSuperhero() {
+export default function UpdateSuperhero({ updateNewHero, closeUpdateModal }) {
   return (
     <div>
-      <div className={styles.background} onClick={() => {}}></div>{" "}
-      <form onSubmit={() => {}} className={styles.modal} id="addHero">
+      <div className={styles.background} onClick={closeUpdateModal}></div>{" "}
+      <form onSubmit={updateNewHero} className={styles.modal} id="addHero">
         <p>Form to update a superhero</p>
         <label>
           Nickname: <input type="text" name="nickname" required />
