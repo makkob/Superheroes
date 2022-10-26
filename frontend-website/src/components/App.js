@@ -12,7 +12,7 @@ import updateHero from "../services/update";
 
 function App() {
   const [items, setItems] = useState([]);
-  const [newHero, setnewHero] = useState();
+  // const [newHero, setnewHero] = useState();
   const [addModal, setaddModal] = useState(false);
   const [updateModal, setupdateModal] = useState(false);
 
@@ -37,11 +37,21 @@ function App() {
   const addNewHero = (evt) => {
     evt.preventDefault();
 
-    const formData = {};
-    for (let i = 0; i <= 4; i++) {
-      formData[evt.target[i].name] = evt.target[i].value;
-    }
-    setnewHero(formData);
+    const formData = {
+      [evt.target[0].name]: evt.target[0].value,
+      [evt.target[1].name]: evt.target[1].value,
+      [evt.target[2].name]: evt.target[2].value,
+      [evt.target[3].name]: evt.target[3].value,
+      picture: evt.target.filename.files[0],
+    };
+    // for (let i = 0; i <= 3; i++) {
+    //   formData[evt.target[i].name] = evt.target[i].value;
+    // }
+
+    // evt.target.filename.files[0];
+
+    // console.log(formData);
+    // setnewHero(formData);
     addNew(formData);
     setaddModal(false);
   };

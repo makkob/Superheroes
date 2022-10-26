@@ -8,19 +8,26 @@ export default function AddSuperhero({ addNewHero, closeAddModal }) {
       <form onSubmit={addNewHero} className={styles.modal} id="addHero">
         <p>Form to add superhero</p>
         <label>
-          Nickname: <input type="text" name="nickname" />
+          Nickname: <input type="text" name="nickname" required />
         </label>{" "}
         <label>
-          Real name: <input type="text" name="real_name" />
+          Real name: <input type="text" name="real_name" required />
         </label>{" "}
         <label>
-          Origin description: <input type="text" name="origin_description" />
+          Origin description:{" "}
+          <input type="text" name="origin_description" required />
         </label>{" "}
         <label>
-          Catch phrase: <input type="text" name="catch_phrase" />
+          Catch phrase: <input type="text" name="catch_phrase" required />
         </label>{" "}
         <label>
-          Image: <input type="file" name="filename" />
+          Image:{" "}
+          <input
+            type="file"
+            name="filename"
+            accept=".jpeg, .png, .webp, .JPG"
+            required
+          />
         </label>{" "}
         <input type="submit" value="Submit" />
       </form>
