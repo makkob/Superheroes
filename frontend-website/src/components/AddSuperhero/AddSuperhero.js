@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./AddSuperhero.module.css";
 
-export default function AddSuperhero({ addNewHero }) {
+export default function AddSuperhero({ addNewHero, closeAddModal }) {
   return (
-    <>
-      <div className={styles.background} onClick={() => {}}></div>{" "}
+    <div>
+      <div className={styles.background} onClick={closeAddModal}></div>{" "}
       <form onSubmit={addNewHero} className={styles.modal} id="addHero">
         <p>Form to add superhero</p>
         <label>
@@ -24,6 +24,6 @@ export default function AddSuperhero({ addNewHero }) {
         </label>{" "}
         <input type="submit" value="Submit" />
       </form>
-    </>
+    </div>
   );
 }

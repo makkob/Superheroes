@@ -58,6 +58,7 @@ function App() {
   // };
 
   const onLoadMore = () => addNew();
+  const closeAddModal = () => setaddModal(false);
 
   return (
     <div className="App">
@@ -68,7 +69,9 @@ function App() {
         handleDelete={handleDelete}
       />
       <LoadMore onLoadMore={onLoadMore} />
-      {addModal && <AddSuperhero addNewHero={addNewHero} />}
+      {addModal && (
+        <AddSuperhero addNewHero={addNewHero} closeAddModal={closeAddModal} />
+      )}
       {updateModal && <UpdateSuperhero />}
     </div>
   );
