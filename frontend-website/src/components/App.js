@@ -15,10 +15,11 @@ function App() {
   const [updateID, setUpdateID] = useState();
   const [addModal, setaddModal] = useState(false);
   const [updateModal, setupdateModal] = useState(false);
+  const [perPage, setPerPage] = useState(5);
 
   useEffect(() => {
     fetchItems();
-  }, [items]);
+  }, []);
 
   let fetchItems = () => {
     fetchItemsFromDB()
@@ -67,7 +68,7 @@ function App() {
     setupdateModal(false);
   };
 
-  const onLoadMore = () => console.log("LM");
+  const onLoadMore = () => setPerPage(perPage + 5);
   const closeAddModal = () => setaddModal(false);
   const closeUpdateModal = () => {
     setupdateModal(false);
@@ -80,6 +81,7 @@ function App() {
         heroes={items}
         handleUpdate={handleUpdate}
         handleDelete={handleDelete}
+        perPage={perPage}
       />
       <LoadMore onLoadMore={onLoadMore} />
       {addModal && (

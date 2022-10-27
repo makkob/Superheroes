@@ -2,11 +2,13 @@ import React from "react";
 import Item from "./Item";
 import styles from "./Items.module.css";
 
-export default function Items({ heroes, handleDelete, handleUpdate }) {
+export default function Items({ heroes, handleDelete, handleUpdate, perPage }) {
+  let perPageheroes = heroes.slice(0, perPage);
+
   return (
     <div className={styles.itemsDiv}>
       <div className={styles.itemsGrid}>
-        {heroes.map(
+        {perPageheroes.map(
           ({
             _id,
             nickname,
