@@ -14,24 +14,30 @@ async function updateHero(
   }
 ) {
   let formData = new FormData();
-  formData.append("nickname", nickname);
-  formData.append("real_name", real_name);
-  formData.append("origin_description", origin_description);
-  formData.append("superpowers", superpowers);
-  formData.append("catch_phrase", catch_phrase);
-  formData.append("picture", picture, nickname);
-  // return await axios
-  //   .patch(URL + id, data)
-  //   .then((res) => alert(`The hero has been removed from database`))
+  if (nickname) {
+    formData.append("nickname", nickname);
+  }
+  if (real_name) {
+    formData.append("real_name", real_name);
+  }
+  if (origin_description) {
+    formData.append("origin_description", origin_description);
+  }
+  if (superpowers) {
+    formData.append("superpowers", superpowers);
+  }
+  if (catch_phrase) {
+    formData.append("catch_phrase", catch_phrase);
+  }
+  if (picture) {
+    formData.append("picture", picture, id);
+  }
 
-  //   .catch((err) => console.log(err));
   return await axios
     .put(URL + id, formData)
     .then((res) => console.log(JSON.stringify(res)))
 
     .catch((err) => console.log(err));
-  // console.log(id);
-  // console.log(data);
 }
 
 export default updateHero;

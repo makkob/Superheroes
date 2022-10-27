@@ -4,7 +4,7 @@ import FileService from "./fileService.js";
 
 class PostService {
   async create(post, picture) {
-    const fileName = FileService.saveFile(picture);
+    const fileName = FileService.saveFile(picture, post.nickname);
     const createdPost = await Post.create({ ...post, picture: fileName });
     return createdPost;
   }
@@ -27,7 +27,7 @@ class PostService {
     //   throw new Error("не указан ID");
     // }
     // тут ломается
-    const fileName = FileService.saveFile(picture);
+    const fileName = FileService.saveFile(picture, post.body.nickname);
     const updatedPost = await Post.findByIdAndUpdate(post.params.id, {
       ...post.body,
       picture: fileName,
@@ -35,13 +35,13 @@ class PostService {
     return updatedPost;
   }
 
-  async delete(id) {
+  async delete(id, name) {
     if (!id) {
       throw new Error("не указан ID");
     }
 
-    // FileService.deleteFile(id);
-    const post = await Post.findByIdAndDelete(id);
+    FileService.deleteFile(name);
+    const post = await Post.findByIdAndDelete(id, name);
     return post;
   }
 }

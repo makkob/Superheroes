@@ -3,9 +3,9 @@ import * as path from "path";
 import * as fs from "fs";
 
 class FileService {
-  saveFile = (file) => {
+  saveFile = (file, heroName) => {
     try {
-      const fileName = uuid.v4() + ".jpg";
+      const fileName = heroName + ".jpg";
       const filePath = path.resolve("static", fileName);
       file.mv(filePath);
       return fileName;
@@ -14,9 +14,9 @@ class FileService {
     }
   };
 
-  deleteFile = (id) => {
-    console.log(id);
-    fs.unlink("./static/" + id + ".jpg", (err) => {
+  deleteFile = (name) => {
+    console.log(name);
+    fs.unlink("./static/" + name + ".jpg", (err) => {
       if (err) {
         throw err;
       }

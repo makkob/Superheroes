@@ -27,7 +27,6 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
-    // .finally(() => scroll());
   };
 
   const addHeroes = () => setaddModal(true);
@@ -47,14 +46,7 @@ function App() {
       [evt.target[4].name]: evt.target[4].value,
       picture: evt.target.filename.files[0],
     };
-    // for (let i = 0; i <= 3; i++) {
-    //   formData[evt.target[i].name] = evt.target[i].value;
-    // }
 
-    // evt.target.filename.files[0];
-
-    // console.log(formData);
-    // setnewHero(formData);
     addNew(formData);
     setaddModal(false);
   };
@@ -70,7 +62,7 @@ function App() {
       [evt.target[4].name]: evt.target[4].value,
       picture: evt.target.filename.files[0],
     };
-    // console.log();
+
     updateHero(updateID, formData);
     setupdateModal(false);
   };
