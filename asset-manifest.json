@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/Superheroes/frontend-website/static/css/main.87e8db94.css",
+    "main.js": "/Superheroes/frontend-website/static/js/main.c1056373.js",
+    "static/media/Мишко.jpg": "/Superheroes/frontend-website/static/media/Мишко.5fcaf6585cf7526a6010.jpg",
+    "static/media/1.jpg": "/Superheroes/frontend-website/static/media/1.60b41dafeb9cc9800025.jpg",
+    "static/media/Max.jpg": "/Superheroes/frontend-website/static/media/Max.c08996605776ccf209fe.jpg",
+    "static/media/12231231.jpg": "/Superheroes/frontend-website/static/media/12231231.8b3918ab3d8cd912b6f4.jpg",
+    "static/media/21231213.jpg": "/Superheroes/frontend-website/static/media/21231213.38bc645cbdc7dddb574b.jpg",
+    "static/media/undefined.jpg": "/Superheroes/frontend-website/static/media/undefined.38bc645cbdc7dddb574b.jpg",
+    "static/media/21213213213.jpg": "/Superheroes/frontend-website/static/media/21213213213.180c270733fd29db7114.jpg",
+    "static/media/Spiderman.jpg": "/Superheroes/frontend-website/static/media/Spiderman.8327d93a94b754542a7a.jpg",
+    "static/media/Wolverine777.jpg": "/Superheroes/frontend-website/static/media/Wolverine777.8327d93a94b754542a7a.jpg",
+    "static/media/Wolverine777222.jpg": "/Superheroes/frontend-website/static/media/Wolverine777222.8327d93a94b754542a7a.jpg",
+    "static/media/Wolverine898.jpg": "/Superheroes/frontend-website/static/media/Wolverine898.8327d93a94b754542a7a.jpg",
+    "static/media/2312132132123.jpg": "/Superheroes/frontend-website/static/media/2312132132123.ce328c85c1262fd2ec69.jpg",
+    "static/media/12323121213.jpg": "/Superheroes/frontend-website/static/media/12323121213.03e5eeac37e2be509b0c.jpg",
+    "static/media/213213.jpg": "/Superheroes/frontend-website/static/media/213213.04f988f322dc72276893.jpg",
+    "static/media/jpg": "/Superheroes/frontend-website/static/media/213231231213212123231.9000438d617d09a2271f.jpg",
+    "static/media/2132312321321.jpg": "/Superheroes/frontend-website/static/media/2132312321321.bd7f01b10057a4e32d6e.jpg",
+    "static/media/2.jpg": "/Superheroes/frontend-website/static/media/2.e209b1594daa641d41fa.jpg",
+    "static/media/Pasha.jpg": "/Superheroes/frontend-website/static/media/Pasha.c926261817257713bd49.jpg",
+    "index.html": "/Superheroes/frontend-website/index.html",
+    "main.87e8db94.css.map": "/Superheroes/frontend-website/static/css/main.87e8db94.css.map",
+    "main.c1056373.js.map": "/Superheroes/frontend-website/static/js/main.c1056373.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87e8db94.css",
+    "static/js/main.c1056373.js"
+  ]
+}
