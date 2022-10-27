@@ -21,12 +21,16 @@ class PostService {
     return post;
   }
 
-  async update(post) {
-    if (!post._id) {
-      throw new Error("не указан ID");
-    }
-    const updatedPost = await Post.findByIdAndUpdate(post._id, post, {
-      new: true,
+  async update(post, picture) {
+    console.log(post);
+    // if (!post._id) {
+    //   throw new Error("не указан ID");
+    // }
+    // тут ломается
+    const fileName = FileService.saveFile(picture);
+    const updatedPost = await Post.findByIdAndUpdate(post.params.id, {
+      ...post.body,
+      picture: fileName,
     });
     return updatedPost;
   }
