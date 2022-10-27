@@ -11,12 +11,24 @@ async function addNew({
   picture,
 }) {
   let formData = new FormData();
-  formData.append("nickname", nickname);
-  formData.append("real_name", real_name);
-  formData.append("origin_description", origin_description);
-  formData.append("superpowers", superpowers);
-  formData.append("catch_phrase", catch_phrase);
-  formData.append("picture", picture, nickname);
+  if (nickname) {
+    formData.append("nickname", nickname);
+  }
+  if (real_name) {
+    formData.append("real_name", real_name);
+  }
+  if (origin_description) {
+    formData.append("origin_description", origin_description);
+  }
+  if (superpowers) {
+    formData.append("superpowers", superpowers);
+  }
+  if (catch_phrase) {
+    formData.append("catch_phrase", catch_phrase);
+  }
+  if (picture && nickname) {
+    formData.append("picture", picture, nickname);
+  }
 
   // console.log(formData);
   return await axios

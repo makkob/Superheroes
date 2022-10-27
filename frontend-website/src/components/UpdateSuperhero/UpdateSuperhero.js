@@ -9,7 +9,12 @@ export default function UpdateSuperhero({ updateNewHero, closeUpdateModal }) {
         <p>Form to update a superhero</p>
         <label>
           Nickname:{" "}
-          <input type="text" name="nickname" className={styles.input} />
+          <input
+            type="text"
+            name="nickname"
+            className={styles.input}
+            // required
+          />
         </label>{" "}
         <label>
           Real name:{" "}
