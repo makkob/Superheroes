@@ -12,13 +12,13 @@ import updateHero from "../services/update";
 
 function App() {
   const [items, setItems] = useState([]);
-  const [newHero, setnewHero] = useState();
+  const [updateID, setUpdateID] = useState();
   const [addModal, setaddModal] = useState(false);
   const [updateModal, setupdateModal] = useState(false);
 
   useEffect(() => {
     fetchItems();
-  }, []);
+  }, [items]);
 
   let fetchItems = () => {
     fetchItemsFromDB()
@@ -32,8 +32,10 @@ function App() {
 
   const addHeroes = () => setaddModal(true);
   const handleDelete = (evt) => deleteHero(evt.target.id);
-  const handleUpdate = (evt) => setupdateModal(true);
-
+  const handleUpdate = (evt) => {
+    setUpdateID(evt.target.id);
+    return setupdateModal(true);
+  };
   const addNewHero = (evt) => {
     evt.preventDefault();
 
@@ -68,12 +70,12 @@ function App() {
       [evt.target[4].name]: evt.target[4].value,
       picture: evt.target.filename.files[0],
     };
-
-    setnewHero(formData);
+    // console.log();
+    updateHero(updateID, formData);
     setupdateModal(false);
   };
 
-  const onLoadMore = () => addNew();
+  const onLoadMore = () => console.log("LM");
   const closeAddModal = () => setaddModal(false);
   const closeUpdateModal = () => {
     setupdateModal(false);

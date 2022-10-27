@@ -5,7 +5,7 @@ export default function UpdateSuperhero({ updateNewHero, closeUpdateModal }) {
   return (
     <div>
       <div className={styles.background} onClick={closeUpdateModal}></div>{" "}
-      <form onSubmit={updateNewHero} className={styles.modal} id="addHero">
+      <form onSubmit={updateNewHero} className={styles.modal}>
         <p>Form to update a superhero</p>
         <label>
           Nickname:{" "}
