@@ -22,7 +22,7 @@ class PostService {
   }
 
   async update(post, picture) {
-    console.log(post);
+    // console.log(post);
     // if (!post._id) {
     //   throw new Error("не указан ID");
     // }
@@ -39,9 +39,8 @@ class PostService {
     if (!id) {
       throw new Error("не указан ID");
     }
-
-    FileService.deleteFile(name);
-    const post = await Post.findByIdAndDelete(id, name);
+    // FileService.deleteFile(name);
+    const post = await Post.findByIdAndDelete(id);
     return post;
   }
 }
