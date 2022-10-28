@@ -13,7 +13,7 @@ export default function UpdateSuperhero({ updateNewHero, closeUpdateModal }) {
             type="text"
             name="nickname"
             className={styles.input}
-            // required
+            required
           />
         </label>{" "}
         <label>

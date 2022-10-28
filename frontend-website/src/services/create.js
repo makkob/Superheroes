@@ -2,6 +2,7 @@ import axios from "axios";
 
 const URL = `http://localhost:5000/api/posts`;
 
+// Function to make a post request
 async function addNew({
   nickname,
   real_name,

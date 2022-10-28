@@ -14,15 +14,15 @@ class FileService {
     }
   };
 
-  deleteFile = (name) => {
-    console.log(name);
-    fs.unlink("./static/" + name + ".jpg", (err) => {
-      if (err) {
-        throw err;
-      }
+  // deleteFile = (name) => {
+  //   console.log(name);
+  //   fs.unlink("./static/" + name + ".jpg", (err) => {
+  //     if (err) {
+  //       throw err;
+  //     }
 
-      console.log("Delete File successfully.");
-    });
-  };
+  //     console.log("Delete File successfully.");
+  //   });
+  // };
 }
 export default new FileService();

@@ -22,11 +22,6 @@ class PostService {
   }
 
   async update(post, picture) {
-    // console.log(post);
-    // if (!post._id) {
-    //   throw new Error("не указан ID");
-    // }
-    // тут ломается
     const fileName = FileService.saveFile(picture, post.body.nickname);
     const updatedPost = await Post.findByIdAndUpdate(post.params.id, {
       ...post.body,

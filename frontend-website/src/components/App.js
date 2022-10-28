@@ -31,7 +31,9 @@ function App() {
   };
 
   const addHeroes = () => setaddModal(true);
+  // function to delete a hero
   const handleDelete = (evt) => deleteHero(evt.target.id);
+  // function to update a hero
   const handleUpdate = (evt) => {
     setUpdateID(evt.target.id);
     return setupdateModal(true);
@@ -48,7 +50,9 @@ function App() {
       picture: evt.target.filename.files[0],
     };
 
+    // function to make a post request
     addNew(formData);
+    //function to close/open modal for adding a hero
     setaddModal(false);
   };
 
@@ -64,15 +68,18 @@ function App() {
       picture: evt.target.filename.files[0],
     };
 
+    // function to make a patch request
     updateHero(updateID, formData);
+    //function to close/open modal for updating a hero
     setupdateModal(false);
   };
 
+  // pagination
   const onLoadMore = () => setPerPage(perPage + 5);
+
+  // functions to close modals of adding/updating superheroes
   const closeAddModal = () => setaddModal(false);
-  const closeUpdateModal = () => {
-    setupdateModal(false);
-  };
+  const closeUpdateModal = () => setupdateModal(false);
 
   return (
     <div className="App">
